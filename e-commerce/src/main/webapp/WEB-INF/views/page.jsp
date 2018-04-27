@@ -21,9 +21,9 @@
 
     <title>E-commerce ${title}</title>
     
-<script>
-	window.menu = '${title}';
-</script>
+	<script>
+		window.menu = '${title}';
+	</script>
 
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">

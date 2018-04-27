@@ -1,4 +1,4 @@
-package com.nlb.ecombackend;
+package com.nlb.ecombackend.dao;
 
 /**
  * Hello world!
