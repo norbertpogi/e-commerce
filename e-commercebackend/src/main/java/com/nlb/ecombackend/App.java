@@ -1,4 +1,4 @@
-package com.nlb.storebackend;
+package com.nlb.ecombackend;
 
 /**
  * Hello world!
