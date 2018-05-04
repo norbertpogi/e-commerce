@@ -11,6 +11,7 @@ html {
 
 body {
   padding-top: 54px;
+  height:100%;
 }
 
 @media (min-width: 992px) {
@@ -38,10 +39,34 @@ footer {
 }
 
 
-.footer {
+ .footer {
 	width:100%;
 	position:absolute;
 	bottom:20px;
 	height: 60px;
 	
 }
+
+.dataTableImg {
+	width: 100px;
+	height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

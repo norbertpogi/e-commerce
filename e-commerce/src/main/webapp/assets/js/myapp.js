@@ -22,32 +22,67 @@ switch (menu) {
 	}
 
 	// code for jquery dataTable
-	// creat a dataSet
-	var products = [
-		
-			['1', 'ABC'],
-			['2', 'CYX'],
-			['3', 'PQR'],
-			['4', 'MNO'],
-			['5', 'WVB'],
-			['6', 'CFG'],
-			['7', 'HIK'],
-			['8', 'LMP'],
-	];
-	
 	var $table = $('#productListTable');
-	//execute the below code only where we have this table
-	if ($table.length){
+	// execute the below code only where we have this table
+	if ($table.length){		
+		// console.log('Inside the table!');
 		
-		console.log('Inside the table!');
-		
-		$table.DataTable({
-			lengthMenu: [[3,5,10,-1], ['3 Records','5 Records', '10 Records', 'ALL']],
-			pageLength: 5,
-			data: products
-		});
+		var jsonUrl = '';
+		if(window.categoryId == '') {
+			jsonUrl = window.contextRoot + '/json/data/all/products';
+		} 
+		else {
+		jsonUrl = window.contextRoot + '/json/data/category/'+ window.categoryId + '/products';
+	}
+			
+			$table.DataTable({
+				lengthMenu: [[3,5,10,-1], ['3 Records','5 Records', '10 Records', 'ALL']],
+				pageLength: 5,
+				ajax: {
+					url: jsonUrl,
+					dataSrc: ''				
+				},
+				columns: [
+					{
+						data: 'code',
+						bSortable: false,
+						mRender: function(data, type, row){
+							return '<img src="'+window.contextRoot+'/resources/images/'+data+'.jpg" class="dataTableImg"/>';
+						}
+					},
+					{
+						data: 'name'
+					},
+					{
+						data: 'brand'
+					},
+					{
+						data: 'unitPrice',
+						mRender: function(data, type, row){
+							return '&#8369;' + data
+						}
+					},
+					{
+						data: 'quantity'
+					},
+					{
+						data: 'id',
+						bSortable: false,
+						mRender: function(data, type, row){
+							var str = '';
+							str += '<a href="'+window.contextRoot+ '/show/'+data+'/product" class="btn btn-primary"><i class="far fa-eye"></i></a> &#160;';
+							str += '<a href="'+window.contextRoot+ '/cart//add/'+data+'/product" class="btn btn-success"><i class="fas fa-shopping-cart"></i></a>';
+							
+							return str;
+						}
+					},
+					
+					
+				]
+			});
 		
 	}
+	
 });
 
 

@@ -6,6 +6,7 @@
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" />
+<spring:url var="webfonts" value="/resources/webfonts" />
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
@@ -23,7 +24,8 @@
 <title>E-commerce ${title}</title>
 
 <script>
-	window.menu = '${title}';
+	window.menu = '${title}';	
+	window.contextRoot = '${contextRoot}';
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -32,59 +34,64 @@
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 <!-- Bootstrap DataTables -->
-<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
-<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/af-2.2.2/kt-2.3.2/r-2.2.1/datatables.min.css"/> -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet"> 
 
+	<!-- font awesome -->
+<link href="${css}/fontawesome-all.css" rel="stylesheet">	
+<link href="${css}/fontawesome-all.min.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
+
 
 </head>
 
 <body>
 
-	<!-- Navigation -->
-	<%@include file="./shared/navbar.jsp"%>
+	<div class="se-pre-con"></div>
+	<div class="wrapper">
+		<!-- Navigation -->
+		<%@include file="./shared/navbar.jsp"%>
 
-	<!-- Page Content -->
-	<div class="content">
-		<!-- Loading the home content -->
-		<c:if test="${userClickHome == true }">
-			<%@include file="home.jsp"%>
-		</c:if>
+		<!-- Page Content -->
+		<div class="content">
+			<!-- Loading the home content -->
+			<c:if test="${userClickHome == true }">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-		<!-- Load only when user clicks about -->
-		<c:if test="${userClickAbout == true }">
-			<%@include file="about.jsp"%>
-		</c:if>
+			<!-- Load only when user clicks about -->
+			<c:if test="${userClickAbout == true }">
+				<%@include file="about.jsp"%>
+			</c:if>
 
-		<!-- Load only when user clicks contact -->
-		<c:if test="${userClickContact == true }">
-			<%@include file="contact.jsp"%>
-		</c:if>
+			<!-- Load only when user clicks contact -->
+			<c:if test="${userClickContact == true }">
+				<%@include file="contact.jsp"%>
+			</c:if>
 
-		<c:if
-			test="${userClickAllProducts == true or userClickCategoryProducts == true}">
-			<%@include file="listProducts.jsp"%>
-		</c:if>
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+		</div>
+		<!-- /.container -->
+
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/jquery.min.js"></script>
+		<script src="${js}/bootstrap.bundle.min.js"></script>
+
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+
+		<!-- DataTable Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+
+		<script src="${js}/myapp.js"></script>
 	</div>
-	<!-- /.container -->
-
-	<!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
-
-	<!-- Bootstrap core JavaScript -->
-	<script src="${js}/jquery.min.js"></script>
-	<script src="${js}/bootstrap.bundle.min.js"></script>
-
-	<!-- DataTable Plugin -->
-	<script src="${js}/jquery.dataTables.js"></script>
-
-	<!-- DataTable Bootstrap Script -->
-	<script src="${js}/dataTables.bootstrap.js"></script>
-
-
-	<script src="${js}/myapp.js"></script>
 
 </body>
 
