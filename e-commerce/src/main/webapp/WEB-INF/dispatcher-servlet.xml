@@ -14,7 +14,7 @@
     http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd  
     ">
    
-    <context:component-scan base-package="com.nlb.ecom.controller"/>
+    <context:component-scan base-package="com.nlb.ecom"/>
     <context:component-scan base-package="com.nlb.ecombackend"/>
     
 	<bean id="viewResolver"
