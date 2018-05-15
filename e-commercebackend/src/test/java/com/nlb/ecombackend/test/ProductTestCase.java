@@ -44,8 +44,9 @@ public class ProductTestCase {
 				3,productDAO.getLatestActiveProducts(3).size());
 		
 	} 
-
-	/*@Test
+	
+	
+		/*@Test
 	public void testCRUDProduct() {
 
 		// create operation

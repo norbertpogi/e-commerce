@@ -63,7 +63,13 @@ switch (menu) {
 						}
 					},
 					{
-						data: 'quantity'
+						data: 'quantity',
+						mRender: function(data, type, row){
+							if (data < 1) {
+								return '<span style="color:red">Out of Stock!</pan>';
+							}
+							return data;
+						}
 					},
 					{
 						data: 'id',
@@ -71,7 +77,17 @@ switch (menu) {
 						mRender: function(data, type, row){
 							var str = '';
 							str += '<a href="'+window.contextRoot+ '/show/'+data+'/product" class="btn btn-primary"><i class="far fa-eye"></i></a> &#160;';
-							str += '<a href="'+window.contextRoot+ '/cart//add/'+data+'/product" class="btn btn-success"><i class="fas fa-shopping-cart"></i></a>';
+							
+							if (row.quantity < 1) {
+								str += '<a href="javascript:void(0)" class="btn btn-success disabled"><i class="fas fa-shopping-cart"></i></a>';
+							}
+							else {
+								str += '<a href="'
+										+window.contextRoot
+										+ '/cart/add/'
+										+data
+										+'/product" class="btn btn-success"><i class="fas fa-shopping-cart"></i></a>';							
+							}
 							
 							return str;
 						}
