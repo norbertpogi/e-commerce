@@ -15,7 +15,10 @@
             </li>                        
             <li id="contact">
               <a class="nav-link" href="${contextRoot}/contact">Contact</a>
-            </li>            
+            </li>
+            <li id="manageProducts">
+              <a class="nav-link" href="${contextRoot}/manage/products">Manage Products</a>
+            </li>                                    
           </ul>
           
           <%-- <ul class="nav navbar-nav navbar-right">
