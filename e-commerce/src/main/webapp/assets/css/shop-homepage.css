@@ -56,6 +56,39 @@ footer {
 	color: #ff0000;
 }
 
+.adminDataTableImg {
+	height:50px;
+	width:50px;
+}
+
+.switch {
+	width: 50px;
+	height: 30px;
+	position:relative;
+	display: inline-block
+}
+
+.switch input{
+	display:none;
+}
+
+.slider {
+	position:absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	cursor: pointer;
+	background-color: #ccc;
+	border-radious: 30px;
+	transition: 5s;
+}
+
+.slider:before {
+	
+}
+
+
 
 
 

@@ -22,7 +22,10 @@
                 <div class="card-body">
                 
                 	<!-- FORM ELEMENTS -->
-                	<sf:form class="form-horizontal" modelAttribute="product" action="${contextRoot}/manage/products" method="POST">
+                	<sf:form class="form-horizontal" modelAttribute="product" 
+                		action="${contextRoot}/manage/products" 
+                		method="POST"
+                		enctype="multipart/form-data">
                 		
                     <div class="form-group row">
                         <label class="col-form-label col-lg-4">Enter Product Name:</label>
@@ -60,6 +63,14 @@
                             <sf:input type="number" path="quantity" class="form-control" placeholder="Quanity Available"/>	                            
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-4">Select an Image:</label>
+                        <div class="col-lg-8">
+                            <sf:input type="file" path="file" id="file" class="form-control"/>
+                            <sf:errors path="file" cssClass="help-block" element="em"/>	                            
+                        </div>
+                    </div>
+                    
                      <div class="form-group row">
                         <label class="col-form-label col-lg-4">Select Category:</label>
                         <div class="col-lg-8">
@@ -90,4 +101,67 @@
         </div>
     </div>
     <!-- Modal -->
+    
+    <div class="row">
+    	<div class="col-xs-12">
+    		<div class="col-xs-12">
+    			<h3>Available Products</h3>
+    			<hr/>
+    			<div style="overflow:auto">
+    			<table id="productsTable" class="table table-condensed table-bordered">							
+				<thead>					
+					<tr>					
+						<th>Id</th>
+						<th>&#160;</th>
+						<th>Name</th>
+						<th>Brand</th>
+						<th>Qty. Avail</th>
+						<th>Unit Price</th>
+						<th>Activate</th>				
+						<th>Edit</th>
+					</tr>					
+				</thead>
+				<tbody>
+					<tr>
+						<td>4</td>
+						<td>
+							<img class="adminDataTableImg" src="${contextRoot}/resources/image/PRDMNO123PQRX.jsp"
+								alt="Macbook Pro"/>
+						</td>
+						<td>Macbook Pro</td>
+						<td>3</td>
+						<td>&#8369; 54000.00</td>
+						<td>
+							<label class="switch">
+								<input type="checkbox" checked="checked" value="4"/>
+								<div class="slider"></div>
+							</label>
+						</td>
+						<td>
+							<a href="${contextRoot}/manage/4/product" class="btn btn-warning">
+								<span class="glyphicon glyphicon-perncil"></span>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+				
+				<tfoot>
+					<tr>					
+						<th>Id</th>
+						<th>&#160;</th>
+						<th>Name</th>
+						<th>Brand</th>
+						<th>Qty. Avail</th>
+						<th>Unit Price</th>
+						<th>Activate</th>				
+						<th>Edit</th>
+					</tr>									
+				</tfoot>				
+			</table>
+    		</div>
+    	</div>
+    </div>
+    
 </div>
+
+http://upgrade-bootstrap.bootply.com/
