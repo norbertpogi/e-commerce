@@ -115,7 +115,7 @@
 		          <button type="button" class="close" data-dismiss="modal">&times;</button>		          
 		        </div>			               
 		        <div class="modal-body">
-		        	<sf:form modelAttribute="category" action="${contextRoot}/manage/category"
+		        	<sf:form id="categoryForm" modelAttribute="category" action="${contextRoot}/manage/category"
 		        	method="POST" class="form-horizontal">			        
 		          <div class="form-group row">
                       <label class="col-form-label col-lg-4">Category Name</label>
@@ -131,7 +131,7 @@
 					</div>	
 					<div class="form-group row">
 						<div class="offset-md-4 col-lg-4">														
-							<input type="submit" name="submit" value="Save" class="btn btn-primary"/>						
+							<input type="submit" name="submit" value="Add Category" class="btn btn-primary"/>						
 						</div>
 					</div>
 					</sf:form>	  			

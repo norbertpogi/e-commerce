@@ -99,12 +99,9 @@ public class ManagementController {
 			
 			if(!mProduct.getFile().getOriginalFilename().equals("")) {
 				FileUploadUtility.uploadFile(request, mProduct.getFile(), mProduct.getCode());
-			}
-			
-			
+			}			
 			return "redirect:/manage/products?operation=product";
 		}
-		
 		
 		@RequestMapping(value="/product/{id}/activation", method=RequestMethod.POST)
 		@ResponseBody
