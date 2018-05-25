@@ -78,7 +78,13 @@
                         		items="${categories}"
                         		itemLabel="name"
                         		itemValue="id"
-                        	/>	                            
+                        	/>
+                        	<c:if test="${product.id == 0}">
+                        		<div class="text-right">
+                        		<br/>
+                        		<button type="button" data-toggle="modal" data-target="#myCategoryModal" class="btn btn-warning btn-xs">Add Category</button>
+                        	</c:if>	                            
+                        	</div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -99,69 +105,80 @@
                 </div>
             </div>
         </div>
+        
+        <div class="container">		  		  
+		  <div class="modal fade" id="myCategoryModal" tabindex="-1" role="dialog">
+		    <div class="modal-dialog">
+		      <div class="modal-content">		      
+		        <div class="modal-header">
+		          <h4 class="modal-title">Add New Category</h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>		          
+		        </div>			               
+		        <div class="modal-body">
+		        	<sf:form id="categoryForm" modelAttribute="category" action="${contextRoot}/manage/category"
+		        	method="POST" class="form-horizontal">			        
+		          <div class="form-group row">
+                      <label class="col-form-label col-lg-4">Category Name</label>
+                      <div class="col-lg-8">
+                          <sf:input type="text" path="name" class="form-control" placeholder="Product Name"/>                                                    
+                      </div>
+                  </div>
+                    <div class="form-group row">
+					    <label class="col-form-label col-lg-4">Category Description</label>
+					    <div class="col-lg-8">
+					        <sf:textarea path="description" class="form-control" rows="4" placeholder="Enter your description here!"/>					        
+					    </div>					  
+					</div>	
+					<div class="form-group row">
+						<div class="offset-md-4 col-lg-4">														
+							<input type="submit" name="submit" value="Add Category" class="btn btn-primary"/>						
+						</div>
+					</div>
+					</sf:form>	  			
+		        </div>		        		        			            
+		      </div>
+		    </div>
+		  </div>		  
+		</div>
+        
     </div>
     <!-- Modal -->
-    
+    <br/>
     <div class="row">
-    	<div class="col-xs-12">
-    		<div class="col-xs-12">
-    			<h3>Available Products</h3>
-    			<hr/>
-    			<div style="overflow:auto">
-    			<table id="productsTable" class="table table-condensed table-bordered">							
-				<thead>					
-					<tr>					
-						<th>Id</th>
-						<th>&#160;</th>
-						<th>Name</th>
-						<th>Brand</th>
-						<th>Qty. Avail</th>
-						<th>Unit Price</th>
-						<th>Activate</th>				
-						<th>Edit</th>
-					</tr>					
-				</thead>
-				<tbody>
-					<tr>
-						<td>4</td>
-						<td>
-							<img class="adminDataTableImg" src="${contextRoot}/resources/image/PRDMNO123PQRX.jsp"
-								alt="Macbook Pro"/>
-						</td>
-						<td>Macbook Pro</td>
-						<td>3</td>
-						<td>&#8369; 54000.00</td>
-						<td>
-							<label class="switch">
-								<input type="checkbox" checked="checked" value="4"/>
-								<div class="slider"></div>
-							</label>
-						</td>
-						<td>
-							<a href="${contextRoot}/manage/4/product" class="btn btn-warning">
-								<span class="glyphicon glyphicon-perncil"></span>
-							</a>
-						</td>
-					</tr>
-				</tbody>
-				
-				<tfoot>
-					<tr>					
-						<th>Id</th>
-						<th>&#160;</th>
-						<th>Name</th>
-						<th>Brand</th>
-						<th>Qty. Avail</th>
-						<th>Unit Price</th>
-						<th>Activate</th>				
-						<th>Edit</th>
-					</tr>									
-				</tfoot>				
-			</table>
-    		</div>
-    	</div>
-    </div>
     
+    <div class="col-12">
+        <div class="col-12">
+            	<h3><b>Available Products</b></h3>
+            <hr>
+            <div style="overflow:auto">
+                <table id="adminProductsTable" class="table table-sm table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>&#xA0;</th>
+                            <th>Brand</th>
+                            <th>Name</th>
+                            <th>Qty. Avail</th>
+                            <th>Unit Price</th>
+                            <th>Activate</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    
+                    <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>&#160;</th>
+                            <th>Brand</th>
+                            <th>Name</th>
+                            <th>Qty. Avail</th>
+                            <th>Unit Price</th>
+                            <th>Activate</th>
+                            <th>Edit</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>       
 </div>
-
-http://upgrade-bootstrap.bootply.com/
