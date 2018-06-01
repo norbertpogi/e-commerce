@@ -30,7 +30,7 @@ public class UserTestCase {
 		userDAO = (UserDAO)context.getBean("userDAO");
 	}
 	
-	@Test
+	/*@Test
 	public void testGetAddress() {
 		user = userDAO.getByEmal("norbert@gmail.com");
 		
@@ -40,7 +40,7 @@ public class UserTestCase {
 		assertEquals("Failed to fetch the billing address and size does not match!", "quezon city", 
 				userDAO.getBillingAddress(user).getCity());	
 		
-	}
+	}*/
 	
 	/*@Test
 	public void testAddress() {
@@ -109,7 +109,7 @@ public class UserTestCase {
 	/*@Test
 	public void testUpdateCart() {
 		//fetch the user by its email
-		user = userDAO.getByEmal("norbert@gmail.com");
+		user = userDAO.getByEmail("kn@gmail.com");
 		
 		//get the cart of the user
 		cart = user.getCart();

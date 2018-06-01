@@ -7,20 +7,16 @@ import com.nlb.ecombackend.dto.Cart;
 import com.nlb.ecombackend.dto.User;
 
 public interface UserDAO {
-	
-	boolean addUser(User user);
-	User getByEmal(String email);
-	
-	//add an addresss	
-	boolean addAddress(Address address);
-	Address getBillingAddress(User user);
-	List<Address> listShippingAddress(User user);
-	
-	//alternative
-	/*Address getBillingAddress(int userId);
-	List<Address> listShippingAddress(int userId);*/
-	
-	
-	boolean updateCart(Cart cart);
+	// user related operation
+	User getByEmail(String email);
+	User get(int id);
 
+	boolean add(User user);
+	
+	// adding and updating a new address
+	Address getAddress(int addressId);
+	boolean addAddress(Address address);
+	boolean updateAddress(Address address);
+	Address getBillingAddress(int userId);
+	List<Address> listShippingAddresses(int userId);
 }

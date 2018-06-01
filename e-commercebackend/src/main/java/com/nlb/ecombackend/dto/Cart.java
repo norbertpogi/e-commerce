@@ -19,6 +19,9 @@ public class Cart {
 	@OneToOne
 	private User user;
 	
+	@Column(name = "grand_total")
+	private double grandTotal;
+	
 	public User getUser() {
 		return user;
 	}
@@ -27,8 +30,6 @@ public class Cart {
 		this.user = user;
 	}
 
-	@Column(name = "grand_total")
-	private double grandTotal;
 	
 	@Column(name = "cart_lines")
 	private int cartLines;
@@ -57,11 +58,12 @@ public class Cart {
 	public void setCartLines(int cartLines) {
 		this.cartLines = cartLines;
 	}
-	
 
 	@Override
 	public String toString() {
 		return "Cart [id=" + id + ", user=" + user + ", grandTotal=" + grandTotal + ", cartLines=" + cartLines + "]";
 	}
+
+	
 	
 }

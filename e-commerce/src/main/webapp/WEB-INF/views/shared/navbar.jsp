@@ -21,14 +21,14 @@
             </li>                                    
           </ul>
           
-          <%-- <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
           	<li id="register">
               <a class="nav-link" href="${contextRoot}/register">Sign Up</a>
             </li>                        
             <li id="login">
               <a class="nav-link" href="${contextRoot}/login">Login</a>
             </li> 
-          </ul> --%>
+          </ul>
         </div>
       </div>
     </nav>
