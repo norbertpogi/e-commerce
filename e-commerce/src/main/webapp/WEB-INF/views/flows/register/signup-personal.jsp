@@ -1,80 +1,74 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@include file="../shared/flows-header.jsp"%>
+<%@taglib prefix="sf" uri="http://www.springframework.org/tags/form"%>
 
-<spring:url var="css" value="/resources/css" />
-<spring:url var="js" value="/resources/js" />
-<spring:url var="images" value="/resources/images" />
-
-<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
-
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>E-commerce ${title}</title>
-    
-	<script>
-		window.menu = '${title}';
-	</script>
-
-    <!-- Bootstrap core CSS -->
-    <link href="${css}/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="${css}/shop-homepage.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="${flowExecutionUrl}&_eventId_home">Home</a>        
-      </div>
-    </nav>
-        
-    <!-- Page Content -->
-    <div class="content">
-    	<div class="container">
-    		<h3>This will be trigger by flow!</h3>
-    	</div>  
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-     <%@include file="../../shared/footer.jsp"%>
-        
-     <!-- Bootstrap core JavaScript -->	
-		<script src="${js}/jquery.min.js"></script>
-		
-		<!-- Jquery Validation -->
-		<script src="${js}/jquery.validate.js"></script>
-
-		<script src="${js}/bootstrap.bundle.min.js"></script>
-
-		<!-- DataTable Plugin -->
-		<script src="${js}/jquery.dataTables.js"></script>
-
-		<!-- DataTable Bootstrap Script -->
-		<script src="${js}/dataTables.bootstrap.js"></script>
-		
-			<!-- bootbox -->
-		<script src="${js}/bootbox.min.js"></script>
-		
-
-		<script src="${js}/myapp.js"></script>
-
-  </body>
-
-</html>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 offset-md-3">
+			<div class="border border-primary">			
+		      <div class="card bg-primary text-white">
+			      	<div class="card-body">
+			      		<h4>Sign Up - Personal</h4>
+			      	</div>
+		      </div>
+		      <div class="card">
+			    <div class="card-body">
+			    
+			    <sf:form method="POST" class="form-horizontal" id="registerForm" modelAttribute="user">			    
+				    	<div class="form-group row">
+	                      <label class="col-form-label col-lg-4">First Name</label>
+	                      <div class="col-lg-8">
+	                          <sf:input path="firstName" class="form-control" placeholder="First Name"/>                                                    
+	                      </div>
+	                  	</div>
+	                  	<div class="form-group row">
+	                      <label class="col-form-label col-lg-4">Last Name</label>
+	                      <div class="col-lg-8">
+	                          <sf:input path="lastName" class="form-control" placeholder="Last Name"/>                                                    
+	                      </div>
+	                  	</div>
+	                  	<div class="form-group row">
+	                      <label class="col-form-label col-lg-4">Email</label>
+	                      <div class="col-lg-8">
+	                          <sf:input type="text" path="email" class="form-control" placeholder="juan.delacruz@gmail.com"/>                                                    
+	                      </div>
+	                  	</div>
+	                  	<div class="form-group row">
+	                      <label class="col-form-label col-lg-4">Contact Number</label>
+	                      <div class="col-lg-8">
+	                          <sf:input type="text" path="contactNumber" class="form-control" placeholder="xxxxxxxxxxx" maxlength="12" />                                                    
+	                      </div>
+	                  	</div>
+	                  	<div class="form-group row">
+	                      <label class="col-form-label col-lg-4">Password</label>
+	                      <div class="col-lg-8">
+	                          <sf:input type="password" path="password" class="form-control" placeholder="Password"/>                                                    
+	                      </div>
+	                  	</div>
+	                  	<div class="form-group row">
+	                      <label class="col-form-label col-lg-4">Select Role</label>
+	                      <div class="col-lg-8">
+	                      	 <label class="radio-inline">
+	                      	  	<sf:radiobutton path="role"  value="USER" checked="checked"/> User
+	                      	 </label>
+	                         <label class="radio-inline">
+	                      	  	<sf:radiobutton path="role"  value="SUPPLIER" /> Supplier
+	                      	 </label>
+	                                                                             
+	                      </div>
+	                  	</div>
+	                  	
+	                  	
+	                  <div class="offset-md-4 col-lg-8">
+					    <button type="submit" name="_eventId_billing" class="btn btn-primary">
+					    	Next - Billing <b>></b>					    	
+					    </button>
+					</div>
+                  </sf:form>
+			   
+			    </div>			    
+			  </div>
+		    </div>		
+		</div>
+	</div>
+</div>
+<%@include file="../shared/flows-footer.jsp"%>
