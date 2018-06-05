@@ -15,7 +15,6 @@
     ">
    
     <context:component-scan base-package="com.nlb.ecom"/>
-    <context:component-scan base-package="com.nlb.ecombackend"/>
     
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -41,7 +40,10 @@
 	</wf:flow-registry>
 	
 	<wf:flow-builder-services id="flowBuilderServices"
-    	view-factory-creator="viewFactoryCreator"/>
+    	view-factory-creator="viewFactoryCreator"
+    	validator="validator"
+    	/>
+    	
     
     <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
 		<property name="flowExecutor" ref="flowExecutor" />				
@@ -54,4 +56,32 @@
          <property name="viewResolvers" ref="viewResolver"/>
  	</bean>
 	
+	<!-- validator bean -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/> 
   </beans> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

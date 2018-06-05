@@ -17,31 +17,44 @@
 				    	<div class="form-group row">
 	                      <label class="col-form-label col-lg-4">First Name</label>
 	                      <div class="col-lg-8">
-	                          <sf:input path="firstName" class="form-control" placeholder="First Name"/>                                                    
+	                          <sf:input path="firstName" class="form-control" placeholder="First Name"/>
+	                          <sf:errors path="firstName" cssClass="help-block" element="em"/>                                                    
 	                      </div>
 	                  	</div>
 	                  	<div class="form-group row">
 	                      <label class="col-form-label col-lg-4">Last Name</label>
 	                      <div class="col-lg-8">
-	                          <sf:input path="lastName" class="form-control" placeholder="Last Name"/>                                                    
+	                          <sf:input path="lastName" class="form-control" placeholder="Last Name"/>
+	                          <sf:errors path="lastName" cssClass="help-block" element="em"/>                                                    
 	                      </div>
 	                  	</div>
 	                  	<div class="form-group row">
 	                      <label class="col-form-label col-lg-4">Email</label>
 	                      <div class="col-lg-8">
-	                          <sf:input type="text" path="email" class="form-control" placeholder="juan.delacruz@gmail.com"/>                                                    
+	                          <sf:input type="text" path="email" class="form-control" placeholder="juan.delacruz@gmail.com"/>
+	                          <sf:errors path="email" cssClass="help-block" element="em"/>
+	                                                                              
 	                      </div>
 	                  	</div>
 	                  	<div class="form-group row">
 	                      <label class="col-form-label col-lg-4">Contact Number</label>
 	                      <div class="col-lg-8">
-	                          <sf:input type="text" path="contactNumber" class="form-control" placeholder="xxxxxxxxxxx" maxlength="12" />                                                    
+	                         <sf:input type="text" path="contactNumber" class="form-control" placeholder="xxxxxxxxxxx" maxlength="12" />
+							 <sf:errors path="contactNumber" cssClass="help-block" element="em"/>	
 	                      </div>
 	                  	</div>
 	                  	<div class="form-group row">
 	                      <label class="col-form-label col-lg-4">Password</label>
 	                      <div class="col-lg-8">
-	                          <sf:input type="password" path="password" class="form-control" placeholder="Password"/>                                                    
+	                          <sf:input type="password" path="password" class="form-control" placeholder="Password"/>
+	                           <sf:errors path="password" cssClass="help-block" element="em"/>                                                   
+	                      </div>
+	                  	</div>
+	                  	<div class="form-group row">
+	                      <label class="col-form-label col-lg-4">Confirm Password</label>
+	                      <div class="col-lg-8">
+	                          <sf:input type="password" path="confirmPassword" class="form-control" placeholder="Confirm Password"/>
+	                           <sf:errors path="confirmPassword" cssClass="help-block" element="em"/>                                                   
 	                      </div>
 	                  	</div>
 	                  	<div class="form-group row">
@@ -60,7 +73,7 @@
 	                  	
 	                  <div class="offset-md-4 col-lg-8">
 					    <button type="submit" name="_eventId_billing" class="btn btn-primary">
-					    	Next - Billing <b>></b>					    	
+					    	Next - Billing 	<b>></b>	    	
 					    </button>
 					</div>
                   </sf:form>
