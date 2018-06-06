@@ -35,7 +35,7 @@
 				<c:otherwise>
 					<h6>Qty.Available: ${product.quantity}</h6>
 				</c:otherwise>
-			</c:choose>
+			</c:choose>			
 			<c:choose>
 				<c:when test="${product.quantity < 1}">
 					<h6>
@@ -49,7 +49,14 @@
 						<i class="fas fa-shopping-cart">Add to Cart</i>
 					</a>
 				</c:otherwise>
-			</c:choose>
+			</c:choose>			
+			<security:authorize access="hasAuthority('ADMIN')">
+				<a href="${contextRoot}/manage/${product.id}/product" class="btn btn-warning"> 
+					<i class="fas fa-pencil-alt">Edit</i>							
+				</a>
+			</security:authorize>
+			
+			
 			<a href="${contextRoot}/show/all/products" class="btn btn-success">
 				<span class=""></span>Back
 			</a>

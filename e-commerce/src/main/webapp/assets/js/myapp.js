@@ -97,11 +97,23 @@ switch (menu) {
 								str += '<a href="javascript:void(0)" class="btn btn-success disabled"><i class="fas fa-shopping-cart"></i></a>';
 							}
 							else {
-								str += '<a href="'
+								
+								if(userRole == 'ADMIN'){
+									str += '<a href="'
+										+window.contextRoot
+										+ '/manage/'
+										+data
+										+'/product" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>';
+									
+								}else {
+									str += '<a href="'
 										+window.contextRoot
 										+ '/cart/add/'
 										+data
-										+'/product" class="btn btn-success"><i class="fas fa-shopping-cart"></i></a>';							
+										+'/product" class="btn btn-success"><i class="fas fa-shopping-cart"></i></a>';
+								}
+								
+															
 							}
 							
 							return str;
