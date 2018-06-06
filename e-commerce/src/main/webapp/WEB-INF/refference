@@ -3,28 +3,7 @@ spring-webflow: https://docs.spring.io/spring-webflow/docs/current/reference/htm
 
 spring security
 https://docs.spring.io/spring-security/site/docs/5.0.5.RELEASE/reference/htmlsingle/#ns-web-xml
+https://bcrypt-generator.com/
 
-https://www.youtube.com/watch?v=2x31awTOvRM&index=55&list=PLAXbOMavY3k1VJGqqhfqAn0tUSC14Qsvq
+https://www.youtube.com/watch?v=oheqwYNOidU&list=PLAXbOMavY3k1VJGqqhfqAn0tUSC14Qsvq&index=64
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html><head><title>Login Page</title></head><body onload='document.f.username.focus();'>
-<h3>Login with Username and Password</h3><form name='f' action='/e-commerce/login' method='POST'>
-<table>
-	<tr><td>User:</td><td><input type='text' name='username' value=''></td></tr>
-	<tr><td>Password:</td><td><input type='password' name='password'/></td></tr>
-	<tr><td colspan='2'><input name="submit" type="submit" value="Login"/></td></tr>
-	<input name="_csrf" type="hidden" value="7f8359c6-82d3-48a6-8abb-3805abda2959" />
-</table>
-</form></body></html>

@@ -117,16 +117,16 @@ INSERT INTO category (name, description,image_url,is_active) VALUES ('Mobile', '
 -- adding three users 
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Virat', 'Kohli', 'ADMIN', true, '$2a$06$ORtBskA2g5Wg0HDgRE5ZsOQNDHUZSdpJqJ2.PGXv0mKyEvLnKP7SW', 'vk@gmail.com', '8888888888');
+VALUES ('Norbert', 'Bautista', 'ADMIN', true, '$2y$12$zUzQzonL.BsY0mhf3Ze6b.L8jask4pU8I.XHO0lzhAw5FsIUcXRKq', 'nb@gmail.com', '8888888888');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Ravindra', 'Jadeja', 'SUPPLIER', true, '$2a$06$bzYMivkRjSxTK2LPD8W4te6jjJa795OwJR1Of5n95myFsu3hgUnm6', 'rj@gmail.com', '9999999999');
+VALUES ('Yue', 'Bautista', 'SUPPLIER', true, '$2y$12$OlrNe3EoRfxYaFWXP/S0uOkPKaQsgF8ba34EKtu1.otA2KwxH.bGC', 'yb@gmail.com', '9999999999');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Ravichandra', 'Ashwin', 'SUPPLIER', true, '$2a$06$i1dLNlXj2uY.UBIb9kUcAOxCigGHUZRKBtpRlmNtL5xtgD6bcVNOK', 'ra@gmail.com', '7777777777');
+VALUES ('Kenji', 'Bautista', 'SUPPLIER', true, '$2y$12$66iY.d8qbPnEI67N0XB4M.1hSpwKFn/GpWLdJx8pzpXAjCNR7u08C', 'kb@gmail.com', '7777777777');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Khozema', 'Nullwala', 'USER', true, '$2a$06$4mvvyO0h7vnUiKV57IW3oudNEaKPpH1xVSdbie1k6Ni2jfjwwminq', 'kn@gmail.com', '7777777777');
+VALUES ('Roselle', 'Bautista', 'USER', true, '$2y$12$C6vfKV.uwUb//dS2qSsklOecAz4CCfBADjea5F1aFaAlKLtq0/362', 'rb@gmail.com', '7777777777');
 
 -- adding five products
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)

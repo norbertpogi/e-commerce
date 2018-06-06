@@ -89,8 +89,8 @@
 									</div>
 								</div>
 								 <div class="offset-md-4 col-lg-8">
-								    <input type="submit" value="login" class="btn btn-primary"/>
 								    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token }"/>
+								    <input type="submit" value="login" class="btn btn-primary"/>								    
 								</div>
 							</form>
 							</div>
