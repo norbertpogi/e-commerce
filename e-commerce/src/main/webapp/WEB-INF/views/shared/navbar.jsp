@@ -34,13 +34,13 @@
 				</security:authorize>
 				<security:authorize access="isAuthenticated()">
 					<li class="dropdown">
-						<a href="javascript:void(0)"
-							class="btn btn-secondary dropdown-toggle" id="dropdownMenu1"
-							data-toggle="dropdown">  ${userModel.fullName}<span class="caret"></span>
+						<a href="javascript:void(0)" class="btn btn-secondary dropdown-toggle" id="dropdownMenu1"
+							data-toggle="dropdown">  
+							${userModel.fullName}<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<security:authorize access="hasAuthority('USER')">							
-								<li class="dropdown-item"><a href="${contextRoot}/cart">
+								<li class="dropdown-item"><a href="${contextRoot}/cart/show">
 										<span class="fas fa-shopping-cart"></span>															
 										<i class="badge">${userModel.cart.cartLines} </i>&#x20B1; ${userModel.cart.grandTotal}
 		

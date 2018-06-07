@@ -36,35 +36,38 @@
 				</div>
 			</div> 
 			<div class="row">
-				<div class="col-md-12">
-				
-					<table id="productListTable" class="table table-striped table-bordered" style="width:100%">
-					
-						<thead>
-							<tr>
-								<th></th>
-								<th>NAME</th>
-								<th>BRAND</th>
-								<th>PRICE</th>
-								<th>QTY. Available</th>
-								<th></th>
-															
-							</tr>							
-						</thead>
-						<tfoot>
-							<tr>
-							
-								<th>NAME</th>
-								<th>BRAND</th>
-								<th>PRICE</th>
-								<th>QTY. Available</th>
-								<th></th>
+				<div class="col-md-12">				
+					<!-- edited -->
+					<div class="container-fluid">
+					    <div class="table-responsive">
+					    	<table id="productListTable" class="table table-striped table-bordered" style="width:100%">
+						
+							<thead>
+								<tr>
+									<th></th>
+									<th>NAME</th>
+									<th>BRAND</th>
+									<th>PRICE</th>
+									<th>QTY. Available</th>
+									<th></th>
+																
+								</tr>							
+							</thead>
+							<tfoot>
+								<tr>
 								
-							
-							</tr>
-						</tfoot>
-					
-					</table>
+									<th>NAME</th>
+									<th>BRAND</th>
+									<th>PRICE</th>
+									<th>QTY. Available</th>
+									<th></th>
+									
+								</tr>
+							</tfoot>					
+						</table>
+					    </div>
+					</div>
+					<!-- ends -->				
 				</div>
 			</div>
 		</div>

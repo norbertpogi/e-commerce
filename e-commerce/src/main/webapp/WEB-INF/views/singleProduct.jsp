@@ -1,3 +1,4 @@
+
 <div class="container">
 	<div class="row">
 		<div class="col-12">
@@ -35,21 +36,23 @@
 				<c:otherwise>
 					<h6>Qty.Available: ${product.quantity}</h6>
 				</c:otherwise>
-			</c:choose>			
-			<c:choose>
-				<c:when test="${product.quantity < 1}">
-					<h6>
-						<a href="javascript:void(0)" class="btn btn-primary disabled">							
-								<i class="fas fa-shopping-cart"><del>Add to Cart</del></i>							
+			</c:choose>
+			<security:authorize access="!hasAuthority('ADMIN')">	
+				<c:choose>
+					<c:when test="${product.quantity < 1}">
+						<h6>
+							<a href="javascript:void(0)" class="btn btn-primary disabled">							
+									<i class="fas fa-shopping-cart"><del>Add to Cart</del></i>							
+							</a>
+						</h6>
+					</c:when>
+					<c:otherwise>
+						<a href="${contextRoot}/cart/add/${product.id}/product" class="btn btn-primary"> 
+							<i class="fas fa-shopping-cart">Add to Cart</i>
 						</a>
-					</h6>
-				</c:when>
-				<c:otherwise>
-					<a href="${contextRoot}/cart/add/${product.id}/product" class="btn btn-primary"> 
-						<i class="fas fa-shopping-cart">Add to Cart</i>
-					</a>
-				</c:otherwise>
-			</c:choose>			
+					</c:otherwise>
+				</c:choose>	
+			</security:authorize>		
 			<security:authorize access="hasAuthority('ADMIN')">
 				<a href="${contextRoot}/manage/${product.id}/product" class="btn btn-warning"> 
 					<i class="fas fa-pencil-alt">Edit</i>							

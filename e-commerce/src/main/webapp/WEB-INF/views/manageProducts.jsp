@@ -97,13 +97,12 @@
                             <sf:hidden path="supplierId"/>
                             <sf:hidden path="active"/>
                             <sf:hidden path="purchases"/>
-                            <sf:hidden path="views"/>
-                            
+                            <sf:hidden path="views"/>                            
                         </div>
                     </div>
                     </sf:form>
-                </div>
-            </div>
+                </div>                
+            </div>            
         </div>
         
         <div class="container">		  		  
@@ -148,9 +147,10 @@
     
     <div class="col-12">
         <div class="col-12">
-            	<h3><b>Available Products</b></h3>
-            <hr>
-            <div style="overflow:auto">
+	        <div class="container-fluid">
+	        	<div class="table-responsive">
+	        		<h3><b>Available Products</b></h3>
+            <hr>            
                 <table id="adminProductsTable" class="table table-sm table-bordered">
                     <thead>
                         <tr>
@@ -177,8 +177,9 @@
                             <th>Edit</th>
                         </tr>
                     </tfoot>
-                </table>
-            </div>
+                </table>	
+	        	</div>
+	        </div>            	            
         </div>
     </div>       
 </div>
